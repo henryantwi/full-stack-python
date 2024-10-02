@@ -14,9 +14,14 @@ def base_page(child: rx.Component, hide_navbar=False, *args, **kwargs) -> rx.Com
             rx.color_mode.button(position="bottom-left"),
             rx.logo(),
         )
-    return rx.container(
+    return rx.fragment( # fragment() renders nothing
         navbar(),
-        child,
+        rx.box(
+            child,
+            padding="2em",
+            width="100%",
+            id='content-area-element',
+        ),
         rx.color_mode.button(position="bottom-left", id="my-light-mode-btn"),
         rx.logo(),
         id="my-base-container",

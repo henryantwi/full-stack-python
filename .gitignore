@@ -1,6 +1,10 @@
 *.db
 *.py[cod]
+.idea/
+.venv/
+.vscode/
 .web
 __pycache__/
-assets/external/ 
+assets/external/
+node_modules/
 venv/
